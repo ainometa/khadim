@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohalla Committee</title>
+    <style>
+        #adminForm {
+            display: none;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Include html2canvas library -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+<form action="https://script.google.com/macros/s/AKfycbx9irEMp3QJcof4cZp3YjV0baS9Ys5cvQmIpY_TIGPxVuEZqzRf7s0SSVS6dIRsvkJeOw/exec" method="POST"> <!-- Replace YOUR_WEB_APP_URL with the actual URL -->
+    <!-- (Token Number) -->
+    <label for="tokenNumber">Token Number</label>
+    <input type="text" id="tokenNumber" name="tokenNumber">
+    <br>
+
+    <!-- (Name of the Member) -->
+    <label for="nameDropdown">Name:</label>
+    <select id="nameDropdown" name="nameDropdown">
+    <!-- Options will be added dynamically from Google Sheets -->
+    </select>
+    <br>  
+    
+    <!-- Label (Start Month) -->
+    <label for="startMonth">Start Month:</label>
+    <input type="month" id="startMonth" name="startMonth" onchange="validateStartMonth()">
+    <br>
+
+    <!-- Label (End Month) -->
+    <label for="endMonth">End Month:</label>
+    <input type="month" id="endMonth" name="endMonth" onchange="validateEndMonth()">
+    <br>
+
+    <!-- Text Label (Total Number of Months) -->
+    <label for="totalMonths">Total Number of Months:</label>
+    <input type="number" id="totalMonths" name="totalMonths" readonly oninput="calculateTotalAmount()" min="0">
+    <br>
+
+    <!-- Text Label (Total Amount) -->
+    <label for="totalAmount">Total Amount (in Rupees):</label>
+    <input type="text" id="totalAmount" name="totalAmount" readonly>
+    <br>
+
+    <label for="receiptNumber">Physical Receipt Number:</label>
+    <input type="text" id="receiptNumber2" name="receiptNumber" placeholder="Enter Receipt Number">
+
+    <button id="submitButton" type="submit" onclick="shareJPG(event)">Submit</button>
+</form>
+
+<script src="name.js"></script>
+<script src="share.js"></script>
+<script src="token.js"></script>
+<script src="script.js"></script>
+<script src="warning.js"></script>
+<script src="lastPayment.js"></script>
+<script src="password.js"></script>
+
+</body>
+</html>

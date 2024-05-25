@@ -1,0 +1,95 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Form container */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Form input fields */
+input[type="text"],
+input[type="number"],
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Form input fields for month */
+input[type="month"] {
+    width: calc(100% - 22px); /* Adjusting for the month picker's arrow */
+}
+
+/* Submit button */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling readonly inputs */
+input[readonly] {
+    background-color: #f4f4f4;
+    cursor: not-allowed;
+}
+
+/* Optional: Style the select dropdown */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 25px; /* Adding space for the dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M7 10l5 5 5-5z"/></svg>'); /* SVG for dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+}
+
+/* Optional: Style form error messages */
+.error-message {
+    color: #ff0000;
+    margin-top: 5px;
+    font-size: 14px;
+}
+/* Increasing text size of calendar inputs */
+input[type="month"]::-webkit-calendar-picker-indicator {
+    font-size: 25px; /* Adjust as needed */
+}
+
+input[type="month"]::-webkit-inner-spin-button {
+    font-size: 25px; /* Adjust as needed */
+}
+

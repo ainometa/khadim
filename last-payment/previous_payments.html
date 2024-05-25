@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohalla Committee</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
+  <!-- Store variables in a script tag -->
+  <script>
+    var spreadsheetId = '1FsX-XY9HNkvR1pmLnjbkUClnR2JgBVyY-2V4QbdqkNw'; // Replace with your Google Sheet ID
+    var sheetName = 'Sheet1'; // Replace with your Google Sheet Name 
+    var apiKey = 'AIzaSyAZtuBfZc27B30fU8NPnRB-jmZmcyYjt3o'; // Replace with your API key
+  </script>
+</head>
+<body>
+
+  <h2>Previous Payments</h2>
+  
+  <table id="dataTable"></table>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
